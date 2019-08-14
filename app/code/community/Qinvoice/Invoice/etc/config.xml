@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!-- app/code/local/Qinvoice/Invoice/etc/config.xml -->
+<config>
+    <modules>
+        <Qinvoice_Invoice>
+            <version>0.1.0</version>
+        </Qinvoice_Invoice>
+    </modules>
+    <global>
+        <models>
+            <invoice>
+                <class>Qinvoice_Invoice</class>
+            </invoice>
+        </models>
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <invoice>
+                        <class>invoice/order_observer</class>
+                        <method>sendOnOrder</method>
+                    </invoice>
+                </observers>
+            </sales_order_place_after> 
+            <checkout_onepage_controller_success_action>
+                <observers>
+                    <invoice>
+                        <class>invoice/order_observer</class>
+                        <method>sendOnPayment</method>
+                    </invoice>
+                </observers>
+            </checkout_onepage_controller_success_action>    
+        </events>
+        <helpers>
+            <invoice>
+                <class>Qinvoice_Invoice_Helper</class>
+            </invoice>
+        </helpers>
+    </global>
+	<adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <invoice_options>
+                                            <title>Store Hello World Module Section</title>
+                                        </invoice_options>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+	
+</config> 

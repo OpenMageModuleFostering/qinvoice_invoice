@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Qinvoice_Invoice</name>
+    <version>0.1.2</version>
+    <stability>stable</stability>
+    <license>GPL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Connect to q-invoice for sending and managing invoices</summary>
+    <description>Connect to q-invoice for sending and managing invoices</description>
+    <notes>First release</notes>
+    <authors><author><name>Q-invoice</name><user>q-invoice</user><email>info@q-invoice.com</email></author></authors>
+    <date>2013-07-16</date>
+    <time>12:57:01</time>
+    <contents><target name="magecommunity"><dir name="Qinvoice"><dir name="Invoice"><dir name="Helper"><file name="Data.php" hash="b17b2a7e7d551b9b24924d667759febb"/></dir><dir name="Order"><file name="Observer.php" hash="16bc431c2fb1c47f006ce7e0840683c5"/></dir><dir name="etc"><file name="config.xml" hash="dab71cf14d17e66a498adc4fe5e17f7d"/><file name="configold.xml" hash="190809fc9045610c7749b762b8568ced"/><file name="system.xml" hash="b8047d3ed2e8d3adcc12eb0b49ef25fc"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Qinvoice_Invoice.xml" hash="9d385180e384df30730c917c54cef635"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>communicty</channel><min>1.6.0.0</min><max>1.7.0</max></package></required></dependencies>
+</package>

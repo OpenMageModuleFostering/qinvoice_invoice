@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<config>
+	 <global>
+        <models>
+            <invoice>
+                <class>Qinvoice_Invoice</class>
+            </invoice>
+        </models>
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <invoice_order_observer>
+                        <type>singleton</type>
+                        <class>invoice/order_observer</class>
+                        <method>sendOrder</method>
+                    </invoice_order_observer>
+                </observers>
+            </sales_order_place_after>
+        </events>
+
+		<helpers>
+			<invoice>
+				<class>Qinvoice_Invoice_Helper</class>
+			</invoice>
+		</helpers>
+		<blocks>
+            <adminhtml>
+                <rewrite>
+                    <sales_order_grid>Qinvoice_Invoice_Block_Sales_Order_Grid</sales_order_grid>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+    </global>
+	<frontend>
+      <routers>
+         <helloworld>
+            <args>
+               <modules>
+                 
+               </modules>
+            </args>
+         </helloworld>
+      </routers>
+	</frontend>
+	<adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <invoice_options>
+                                            <title>Store Hello World Module Section</title>
+                                        </invoice_options>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config> 

@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Qinvoice_Invoice",
+    "type": "magento-module",
+    "license": "GPL",
+    "homepage": "",
+    "description": "Connect to q-invoice for sending and managing invoices",
+    "authors": [
+    {
+        "name": "Q-invoice",
+        "email": "info@q-invoice.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

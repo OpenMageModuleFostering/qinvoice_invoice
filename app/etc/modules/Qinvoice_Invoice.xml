@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+     <modules>
+        <Qinvoice_Invoice>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Qinvoice_Invoice>
+    </modules>
+</config>

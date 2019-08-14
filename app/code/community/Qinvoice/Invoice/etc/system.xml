@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <qinvoice translate="label" module="invoice">
+            <label>Qinvoice</label>
+            <sort_order>300</sort_order>
+        </qinvoice>
+    </tabs>
+	<sections>
+        <invoice_options translate="label" module="invoice">
+            <label>Qinvoice Configuration</label>
+            <tab>qinvoice</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store> 
+			<groups>
+                <invoice translate="label">
+                    <label>Qinvoice</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+						<api_url translate="label">
+							<label>API URL</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[e.g. https://app.q-invoice.com/api/xml/1.0/]]></comment>				
+						</api_url>
+						<api_username translate="label">
+							<label>API Username</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>                    
+						</api_username>
+						<api_password translate="label">
+							<label>API Password</label>
+							<frontend_type>password</frontend_type>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>                    
+						</api_password>
+						<layout_code translate="label">
+							<label>Layout Code</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>  
+							<comment><![CDATA[Optional]]></comment>
+						</layout_code>
+						<invoice_remark translate="label">
+							<label>Invoice remark</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[e.g. Order #{order_id}.]]></comment>                    
+						</invoice_remark>
+						<invoice_tag translate="label">
+							<label>Invoice tag</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[Optional. e.g. Your webshop name.]]></comment>                    
+						</invoice_tag>
+						<paid_remark translate="label">
+							<label>Paid remark</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>6</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[e.g. Your payment has been received.]]></comment>                    
+						</paid_remark>
+						<invoice_on_order translate="label">
+							<label>Generate invoice on order</label>
+							<frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>7</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[Yes: invoice for every order. No: invoice for every payment.]]></comment>
+						</invoice_on_order>
+						<send_mail translate="label">
+							<label>Send invoice to customer</label>
+							<frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>8</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[Send email with invoice to customer.]]></comment>
+						</send_mail>
+					</fields>  
+                </invoice>
+            </groups>
+        </invoice_options>
+    </sections>  
+</config>
